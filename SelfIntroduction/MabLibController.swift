@@ -15,17 +15,19 @@ class MabLibController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emptyTextField(andDisablePlayButton: true)
+        emptyTextField(withPlaceholder: "Enter noun", andDisablePlayButton: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        emptyTextField(andDisablePlayButton: true)
-        
+        emptyTextField(withPlaceholder: "Enter noun", andDisablePlayButton: true)
+        textField.isEnabled = true;
+        words = [:]
     }
     
-    func emptyTextField(andDisablePlayButton: Bool) {
+    func emptyTextField(withPlaceholder placeholderText: String, andDisablePlayButton: Bool) {
         playButton.isEnabled = !andDisablePlayButton
         textField.text?.removeAll()
+        textField.placeholder = placeholderText;
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,9 +72,8 @@ extension MabLibController: UITextFieldDelegate {
         } else {
             words["verb"] = textField.text
             
-            emptyTextField(andDisablePlayButton: false)
+            emptyTextField(withPlaceholder: "Hit the play button", andDisablePlayButton: false)
             textField.isEnabled = false;
-            textField.placeholder = "Hit the play button"
         }
     }
     
