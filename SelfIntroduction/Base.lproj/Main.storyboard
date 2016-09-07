@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="646" y="635"/>
         </scene>
-        <!--Empty Controller-->
+        <!--hometown-->
         <scene sceneID="BF3-CB-sJ1">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="iei-iT-3oM" customClass="EmptyController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,11 +165,11 @@
                             <constraint firstItem="dS5-0T-T6U" firstAttribute="centerX" secondItem="NAY-oI-8ya" secondAttribute="centerX" id="ofE-TN-nGU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KG7-Jb-gdR"/>
+                    <navigationItem key="navigationItem" title="hometown" id="KG7-Jb-gdR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-zl-k2x" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="2248"/>
+            <point key="canvasLocation" x="645" y="2248"/>
         </scene>
         <!--languages-->
         <scene sceneID="dmm-e1-x8f">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1H-yF-3Sl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="2248"/>
+            <point key="canvasLocation" x="1404" y="2248"/>
         </scene>
         <!--madlib-->
         <scene sceneID="Qyz-BW-nXM">
@@ -230,6 +230,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Chs-h4-Uy9" kind="show" id="GGS-Bo-TzH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,6 +256,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khq-2F-qrO" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82" y="1450"/>
+        </scene>
+        <!--madlib story-->
+        <scene sceneID="d9Q-PC-Ha2">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Chs-h4-Uy9" customClass="StoryController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tB2-cM-Im9"/>
+                        <viewControllerLayoutGuide type="bottom" id="eyf-qv-KlF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eTW-Hm-rha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwt-8h-gd1">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hwt-8h-gd1" firstAttribute="centerY" secondItem="eTW-Hm-rha" secondAttribute="centerY" id="ChW-Qa-vE0"/>
+                            <constraint firstItem="hwt-8h-gd1" firstAttribute="height" secondItem="eTW-Hm-rha" secondAttribute="height" multiplier="1:2" id="Q6y-9e-vZ3"/>
+                            <constraint firstItem="hwt-8h-gd1" firstAttribute="centerX" secondItem="eTW-Hm-rha" secondAttribute="centerX" id="VoV-Oj-MX5"/>
+                            <constraint firstItem="hwt-8h-gd1" firstAttribute="width" secondItem="eTW-Hm-rha" secondAttribute="width" multiplier="2:3" id="YP9-Gu-yRQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="madlib story" id="nR9-5p-Q1B"/>
+                    <connections>
+                        <outlet property="storyText" destination="hwt-8h-gd1" id="kWz-xO-cJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llI-0I-Utv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="2248"/>
         </scene>
     </scenes>
 </document>

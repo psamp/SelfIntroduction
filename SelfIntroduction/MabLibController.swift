@@ -33,6 +33,21 @@ class MabLibController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let iuoNoun: String! = words["noun"]
+        let iuoVerb: String! = words["verb"]
+        let noun: String = iuoNoun
+        let verb: String = iuoVerb
+        
+        let destinationStory = "If you followed directions, \"\(noun)\" is a noun and \"\(verb)\" is a verb. Otherwise, boo on you."
+        
+        if let destination = segue.destination as? StoryController {
+            
+            destination.story = destinationStory
+        }
+    }
+    
     
 }
 
