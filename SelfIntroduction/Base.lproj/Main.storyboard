@@ -75,7 +75,7 @@
         <!--Interests Controller-->
         <scene sceneID="4vI-KU-cGD">
             <objects>
-                <viewController id="e0C-74-Xcw" customClass="InterestsController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="e0C-74-Xcw" customClass="InterestsController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gLR-cJ-HQ2"/>
                         <viewControllerLayoutGuide type="bottom" id="K9i-xR-XP9"/>
