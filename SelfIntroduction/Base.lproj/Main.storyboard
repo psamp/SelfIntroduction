@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,17 +27,25 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9sT-bj-J1p"/>
                                     <barButtonItem title="interests" id="mYp-Xj-2Wb">
                                         <connections>
-                                            <segue destination="e0C-74-Xcw" kind="show" id="v1T-TS-umI"/>
+                                            <segue destination="e0C-74-Xcw" kind="show" id="rgR-Ot-oZa"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="hometown" id="xBy-1y-UnZ"/>
-                                    <barButtonItem title="languages" id="ntg-IA-8lL"/>
+                                    <barButtonItem title="hometown" id="xBy-1y-UnZ">
+                                        <connections>
+                                            <segue destination="iei-iT-3oM" kind="show" id="LSu-dn-W7K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="languages" id="ntg-IA-8lL">
+                                        <connections>
+                                            <segue destination="95b-ML-duI" kind="show" id="cZT-HD-J2S"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="shows" id="lQn-Aa-buc"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="X5a-7Q-AJv"/>
                                 </items>
                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.61613685344827585" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="princess. 16. software engineer. @theironyard grad. jedi. there's a million things I haven't done." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FLa-bj-06l">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="princess. 16. software engineer. @theironyard grad. jedi. there's a million things I haven't done." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLa-bj-06l">
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -66,13 +74,13 @@
                             <constraint firstItem="hEC-rY-uKy" firstAttribute="height" secondItem="FLa-bj-06l" secondAttribute="height" multiplier="1:2" id="uVg-om-24Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3qY-yw-piI"/>
+                    <navigationItem key="navigationItem" title="home" id="3qY-yw-piI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="647" y="1450"/>
         </scene>
-        <!--Interests Controller-->
+        <!--interests-->
         <scene sceneID="4vI-KU-cGD">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="e0C-74-Xcw" customClass="InterestsController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,18 +92,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-0G-gKZ">
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JFg-hL-JjN"/>
-                                    <barButtonItem title="interests" id="BLs-ER-1L6"/>
-                                    <barButtonItem title="hometown" id="YLh-eO-ZZh"/>
-                                    <barButtonItem title="languages" id="7x7-vv-F75"/>
-                                    <barButtonItem title="shows" id="eZr-zx-8iV"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AYX-an-LZm"/>
-                                </items>
-                                <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.61613685340000002" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-2n-jYJ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -106,23 +102,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="K9i-xR-XP9" firstAttribute="top" secondItem="O3w-0G-gKZ" secondAttribute="bottom" id="BqH-GS-8Ui"/>
                             <constraint firstItem="R5B-2n-jYJ" firstAttribute="width" secondItem="spp-hC-r4k" secondAttribute="width" id="NF3-6g-PS2"/>
-                            <constraint firstItem="O3w-0G-gKZ" firstAttribute="width" secondItem="spp-hC-r4k" secondAttribute="width" id="UQs-qe-asN"/>
                             <constraint firstItem="R5B-2n-jYJ" firstAttribute="centerX" secondItem="spp-hC-r4k" secondAttribute="centerXWithinMargins" id="bdS-zB-r2S"/>
-                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="height" secondItem="spp-hC-r4k" secondAttribute="height" multiplier="2:5" id="qew-EG-xsx"/>
+                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="height" secondItem="spp-hC-r4k" secondAttribute="height" multiplier="3:5" id="qew-EG-xsx"/>
                             <constraint firstItem="R5B-2n-jYJ" firstAttribute="centerY" secondItem="spp-hC-r4k" secondAttribute="centerYWithinMargins" id="t8p-e8-aQf"/>
-                            <constraint firstItem="O3w-0G-gKZ" firstAttribute="centerX" secondItem="spp-hC-r4k" secondAttribute="centerX" id="u19-7D-7sb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XUF-rH-ZVQ"/>
+                    <navigationItem key="navigationItem" title="interests" id="XUF-rH-ZVQ"/>
                     <connections>
                         <outlet property="interestsTable" destination="R5B-2n-jYJ" id="9yn-A6-FyQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pq2-OO-9us" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="1449"/>
+            <point key="canvasLocation" x="1406" y="1450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J5Q-YG-nLh">
@@ -141,6 +134,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cw-sl-mSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-80.625" y="1451.25"/>
+        </scene>
+        <!--Empty Controller-->
+        <scene sceneID="BF3-CB-sJ1">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iei-iT-3oM" customClass="EmptyController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tvg-5n-SVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="nDn-SD-Ryk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NAY-oI-8ya">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dS5-0T-T6U">
+                                <string key="text">Princess lives in Atlanta, which is in the southern USA and has the busiest airport in the world. It is very hot and humid during the summer.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dS5-0T-T6U" firstAttribute="width" secondItem="NAY-oI-8ya" secondAttribute="width" multiplier="2:3" id="62O-s3-88b"/>
+                            <constraint firstItem="dS5-0T-T6U" firstAttribute="centerY" secondItem="NAY-oI-8ya" secondAttribute="centerY" id="A4R-cT-qJJ"/>
+                            <constraint firstItem="dS5-0T-T6U" firstAttribute="height" secondItem="NAY-oI-8ya" secondAttribute="height" multiplier="1:2" id="WcR-TQ-PTg"/>
+                            <constraint firstItem="dS5-0T-T6U" firstAttribute="centerX" secondItem="NAY-oI-8ya" secondAttribute="centerX" id="ofE-TN-nGU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KG7-Jb-gdR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NmC-zl-k2x" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="2179"/>
+        </scene>
+        <!--languages-->
+        <scene sceneID="dmm-e1-x8f">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="95b-ML-duI" customClass="EmptyController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nsW-Ci-gRA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOj-P2-tfn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DyC-es-r6W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Princess currently only speaks English. She'd like to learn French, Spanish, and Hebrew." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-VJ-RyV">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SyR-VJ-RyV" firstAttribute="width" secondItem="DyC-es-r6W" secondAttribute="width" multiplier="2:3" id="Q4G-hU-Piu"/>
+                            <constraint firstItem="SyR-VJ-RyV" firstAttribute="height" secondItem="DyC-es-r6W" secondAttribute="height" multiplier="1:2" id="f16-Fm-JBC"/>
+                            <constraint firstItem="SyR-VJ-RyV" firstAttribute="centerY" secondItem="DyC-es-r6W" secondAttribute="centerY" id="vHC-u6-sEc"/>
+                            <constraint firstItem="SyR-VJ-RyV" firstAttribute="centerX" secondItem="DyC-es-r6W" secondAttribute="centerX" id="wYi-Dl-B8R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="languages" id="IaI-HV-I5i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1H-yF-3Sl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="2178"/>
         </scene>
     </scenes>
 </document>
