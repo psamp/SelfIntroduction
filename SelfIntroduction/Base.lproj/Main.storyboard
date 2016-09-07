@@ -3,27 +3,33 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQq-3u-4UD">
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9sT-bj-J1p"/>
-                                    <barButtonItem title="interests" id="mYp-Xj-2Wb"/>
+                                    <barButtonItem title="interests" id="mYp-Xj-2Wb">
+                                        <connections>
+                                            <segue destination="e0C-74-Xcw" kind="show" id="v1T-TS-umI"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="hometown" id="xBy-1y-UnZ"/>
                                     <barButtonItem title="languages" id="ntg-IA-8lL"/>
                                     <barButtonItem title="shows" id="lQn-Aa-buc"/>
@@ -64,7 +70,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.5" y="776.25"/>
+            <point key="canvasLocation" x="647" y="1450"/>
+        </scene>
+        <!--Interests Controller-->
+        <scene sceneID="4vI-KU-cGD">
+            <objects>
+                <viewController id="e0C-74-Xcw" customClass="InterestsController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gLR-cJ-HQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="K9i-xR-XP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spp-hC-r4k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-0G-gKZ">
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JFg-hL-JjN"/>
+                                    <barButtonItem title="interests" id="BLs-ER-1L6"/>
+                                    <barButtonItem title="hometown" id="YLh-eO-ZZh"/>
+                                    <barButtonItem title="languages" id="7x7-vv-F75"/>
+                                    <barButtonItem title="shows" id="eZr-zx-8iV"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AYX-an-LZm"/>
+                                </items>
+                                <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.61613685340000002" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-2n-jYJ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e0C-74-Xcw" id="VEt-Di-Bnb"/>
+                                    <outlet property="delegate" destination="e0C-74-Xcw" id="8W2-lA-FMJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K9i-xR-XP9" firstAttribute="top" secondItem="O3w-0G-gKZ" secondAttribute="bottom" id="BqH-GS-8Ui"/>
+                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="width" secondItem="spp-hC-r4k" secondAttribute="width" id="NF3-6g-PS2"/>
+                            <constraint firstItem="O3w-0G-gKZ" firstAttribute="width" secondItem="spp-hC-r4k" secondAttribute="width" id="UQs-qe-asN"/>
+                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="centerX" secondItem="spp-hC-r4k" secondAttribute="centerXWithinMargins" id="bdS-zB-r2S"/>
+                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="height" secondItem="spp-hC-r4k" secondAttribute="height" multiplier="2:5" id="qew-EG-xsx"/>
+                            <constraint firstItem="R5B-2n-jYJ" firstAttribute="centerY" secondItem="spp-hC-r4k" secondAttribute="centerYWithinMargins" id="t8p-e8-aQf"/>
+                            <constraint firstItem="O3w-0G-gKZ" firstAttribute="centerX" secondItem="spp-hC-r4k" secondAttribute="centerX" id="u19-7D-7sb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XUF-rH-ZVQ"/>
+                    <connections>
+                        <outlet property="interestsTable" destination="R5B-2n-jYJ" id="9yn-A6-FyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pq2-OO-9us" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="1449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J5Q-YG-nLh">
