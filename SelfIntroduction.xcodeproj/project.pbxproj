@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7450518C1D7FD2A00053F352 /* ShowsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450518B1D7FD2A00053F352 /* ShowsController.swift */; };
 		745DEAED1D7F631700486120 /* Princess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DEAEC1D7F631700486120 /* Princess.swift */; };
 		745DEAEF1D7F958D00486120 /* InterestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DEAEE1D7F958D00486120 /* InterestsController.swift */; };
 		747703EC1D7FB3C900DD9998 /* EmptyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747703EB1D7FB3C900DD9998 /* EmptyController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7450518B1D7FD2A00053F352 /* ShowsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsController.swift; sourceTree = "<group>"; };
 		745DEAEC1D7F631700486120 /* Princess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Princess.swift; sourceTree = "<group>"; };
 		745DEAEE1D7F958D00486120 /* InterestsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsController.swift; sourceTree = "<group>"; };
 		747703EB1D7FB3C900DD9998 /* EmptyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				747703EF1D7FCA9600DD9998 /* StoryController.swift */,
 				747703ED1D7FBE2300DD9998 /* MabLibController.swift */,
 				745DEAEE1D7F958D00486120 /* InterestsController.swift */,
+				7450518B1D7FD2A00053F352 /* ShowsController.swift */,
 				745DEAEC1D7F631700486120 /* Princess.swift */,
 				74DF681C1D7F543C003CFE40 /* Assets.xcassets */,
 				74DF681E1D7F543C003CFE40 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7450518C1D7FD2A00053F352 /* ShowsController.swift in Sources */,
 				745DEAED1D7F631700486120 /* Princess.swift in Sources */,
 				747703EC1D7FB3C900DD9998 /* EmptyController.swift in Sources */,
 				747703EE1D7FBE2300DD9998 /* MabLibController.swift in Sources */,

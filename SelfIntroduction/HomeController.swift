@@ -25,6 +25,8 @@ class HomeController: UIViewController {
         
         if let destination = segue.destination as? InterestsController {
             destination.interests = me.interests
+        } else if let destination = segue.destination as? ShowsController {
+            destination.shows = me.favoriteShows
         }
         
     }

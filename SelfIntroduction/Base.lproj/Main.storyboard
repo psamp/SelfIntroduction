@@ -40,7 +40,11 @@
                                             <segue destination="95b-ML-duI" kind="show" id="cZT-HD-J2S"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="shows" id="lQn-Aa-buc"/>
+                                    <barButtonItem title="shows" id="lQn-Aa-buc">
+                                        <connections>
+                                            <segue destination="CRY-WB-MfO" kind="show" id="YDI-p1-xif"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="X5a-7Q-AJv"/>
                                 </items>
                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.61613685344827585" colorSpace="calibratedRGB"/>
@@ -118,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pq2-OO-9us" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406" y="1450"/>
+            <point key="canvasLocation" x="2173" y="1317"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J5Q-YG-nLh">
@@ -291,6 +295,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llI-0I-Utv" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-83" y="2248"/>
+        </scene>
+        <!--favorite shows-->
+        <scene sceneID="E4D-gH-Ucu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CRY-WB-MfO" customClass="ShowsController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="87u-fg-Bhs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fJ1-10-MTL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="71C-Tw-zBM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dnw-ag-5be">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CRY-WB-MfO" id="7fQ-UE-L5R"/>
+                                    <outlet property="delegate" destination="xKA-L6-xrw" id="XjV-ro-AV6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dnw-ag-5be" firstAttribute="height" secondItem="71C-Tw-zBM" secondAttribute="height" multiplier="3:5" id="8yx-6b-qPc"/>
+                            <constraint firstItem="Dnw-ag-5be" firstAttribute="width" secondItem="71C-Tw-zBM" secondAttribute="width" id="L9Q-Sz-Zpd"/>
+                            <constraint firstItem="Dnw-ag-5be" firstAttribute="centerX" secondItem="71C-Tw-zBM" secondAttribute="centerXWithinMargins" id="STM-D1-lj1"/>
+                            <constraint firstItem="Dnw-ag-5be" firstAttribute="centerY" secondItem="71C-Tw-zBM" secondAttribute="centerYWithinMargins" id="rBz-IQ-YcC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="favorite shows" id="xKA-L6-xrw"/>
+                    <connections>
+                        <outlet property="showsTable" destination="Dnw-ag-5be" id="zJL-Hr-nes"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqj-DX-nfv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173" y="1973"/>
         </scene>
     </scenes>
 </document>
