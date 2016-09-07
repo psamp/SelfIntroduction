@@ -10,6 +10,7 @@
 		745DEAED1D7F631700486120 /* Princess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DEAEC1D7F631700486120 /* Princess.swift */; };
 		745DEAEF1D7F958D00486120 /* InterestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DEAEE1D7F958D00486120 /* InterestsController.swift */; };
 		747703EC1D7FB3C900DD9998 /* EmptyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747703EB1D7FB3C900DD9998 /* EmptyController.swift */; };
+		747703EE1D7FBE2300DD9998 /* MabLibController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747703ED1D7FBE2300DD9998 /* MabLibController.swift */; };
 		74DF68161D7F543B003CFE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF68151D7F543B003CFE40 /* AppDelegate.swift */; };
 		74DF68181D7F543B003CFE40 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF68171D7F543B003CFE40 /* HomeController.swift */; };
 		74DF681B1D7F543B003CFE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DF68191D7F543B003CFE40 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		745DEAEC1D7F631700486120 /* Princess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Princess.swift; sourceTree = "<group>"; };
 		745DEAEE1D7F958D00486120 /* InterestsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsController.swift; sourceTree = "<group>"; };
 		747703EB1D7FB3C900DD9998 /* EmptyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyController.swift; sourceTree = "<group>"; };
+		747703ED1D7FBE2300DD9998 /* MabLibController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MabLibController.swift; sourceTree = "<group>"; };
 		74DF68121D7F543B003CFE40 /* SelfIntroduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfIntroduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DF68151D7F543B003CFE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DF68171D7F543B003CFE40 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				74DF68171D7F543B003CFE40 /* HomeController.swift */,
 				747703EB1D7FB3C900DD9998 /* EmptyController.swift */,
 				74DF68191D7F543B003CFE40 /* Main.storyboard */,
+				747703ED1D7FBE2300DD9998 /* MabLibController.swift */,
 				745DEAEE1D7F958D00486120 /* InterestsController.swift */,
 				745DEAEC1D7F631700486120 /* Princess.swift */,
 				74DF681C1D7F543C003CFE40 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 			files = (
 				745DEAED1D7F631700486120 /* Princess.swift in Sources */,
 				747703EC1D7FB3C900DD9998 /* EmptyController.swift in Sources */,
+				747703EE1D7FBE2300DD9998 /* MabLibController.swift in Sources */,
 				745DEAEF1D7F958D00486120 /* InterestsController.swift in Sources */,
 				74DF68181D7F543B003CFE40 /* HomeController.swift in Sources */,
 				74DF68161D7F543B003CFE40 /* AppDelegate.swift in Sources */,
